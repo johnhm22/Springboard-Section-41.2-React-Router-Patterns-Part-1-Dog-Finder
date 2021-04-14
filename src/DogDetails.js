@@ -16,28 +16,17 @@ const DogDetails = (props) => {
 
     // Photo: <img src={d.src} height='200px' width='200px'></img>
 
-
-    // {props.dogdetails.map(d => {
-    //     if (d.name === dog){
-    //     <li>
-    //     {d.name}
-    //     </li>
-    //     }
-    // })}
-
-       props.dogdetails.map(d => {
-        if (d.name === dog){
-        return props.dogdetails.name;
-        }
-        })
-        
-   
-
     return (
         <div>
         <h1>Hi, this is the details page for {dog}</h1>
         <ul>
-          <li></li>
+            {props.dogdetails.map(d => {
+                if (d.name === dog){
+                <li>
+                {d.name}
+                </li>
+                }
+            })}
         </ul>
         </div>
     );
